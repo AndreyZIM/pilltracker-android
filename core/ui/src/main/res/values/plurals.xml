@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <plurals name="days_ago">
+        <item quantity="one">@string/days_one</item>
+        <item quantity="few">@string/days_few</item>
+        <item quantity="many">@string/days_more</item>
+        <item quantity="other">@string/days_more</item>
+    </plurals>
+
+    <plurals name="months_ago">
+        <item quantity="one">@string/months_one</item>
+        <item quantity="few">@string/months_few</item>
+        <item quantity="many">@string/months_more</item>
+        <item quantity="other">@string/months_more</item>
+    </plurals>
+
+    <plurals name="years_ago">
+        <item quantity="one">@string/years_one</item>
+        <item quantity="few">@string/years_few</item>
+        <item quantity="many">@string/years_more</item>
+        <item quantity="other">@string/years_more</item>
+    </plurals>
+
+</resources>

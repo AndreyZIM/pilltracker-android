@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "PillTracker"
 include(":app")
- 
+include(":core")
+include(":core:ui")
