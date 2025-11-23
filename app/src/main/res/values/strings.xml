@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PillTracker</string>
+
+
+    <string name="aids">Аптечки</string>
+    <string name="dairy">Дневник</string>
+    <string name="settings">Настройки</string>
 </resources>
