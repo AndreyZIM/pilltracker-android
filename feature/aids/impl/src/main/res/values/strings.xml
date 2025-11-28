@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_manual">Руководство пользователя</string>
+    <string name="compatibility_calculator">Калькулятор совместимости</string>
+    <string name="support">Поддержка</string>
+    <string name="delete_aid">Удалить аптечку?</string>
+    <string name="delete_aid_description">Аптечка будет удалена из списка. Все препараты, которые относятся к этой аптечке, будут удалены.</string>
+    <string name="delete_preparation">Удалить?</string>
+    <string name="delete_preparation_description">Препарат будет удален из списка. Убедитесь, что Вы точно утилизировали препарат.</string>
+    <string name="add_preparation_description">Добавьте препараты нажав на "+"</string>
+    <string name="delete">Удалить</string>
+    <string name="edit">Изменить</string>
+</resources>
