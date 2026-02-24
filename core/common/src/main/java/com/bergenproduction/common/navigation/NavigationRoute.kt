@@ -1,0 +1,3 @@
+package com.bergenproduction.common.navigation
+
+interface NavigationRoute
