@@ -141,7 +141,7 @@ internal fun PreparationInfoScreen(
                 color = MaterialTheme.colorScheme.onSurface
             )
             Text(
-                text = "${viewModel.years} год ${viewModel.months} месяца ${viewModel.days} дня",
+                text = stringResource(R.string.expiration_duration, viewModel.years, viewModel.months, viewModel.days),
                 fontSize = 22.sp,
                 lineHeight = 28.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,

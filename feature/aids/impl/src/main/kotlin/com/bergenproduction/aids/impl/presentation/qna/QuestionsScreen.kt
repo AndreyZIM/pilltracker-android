@@ -47,7 +47,7 @@ internal fun QuestionsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Q&A", fontWeight = FontWeight.Medium) },
+                title = { Text(stringResource(R.string.QNA), fontWeight = FontWeight.Medium) },
                 navigationIcon = {
                     IconButton(onBackPress) {
                         Icon(Icons.AutoMirrored.Rounded.ArrowBack, null)

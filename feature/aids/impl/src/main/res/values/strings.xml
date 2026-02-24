@@ -43,4 +43,11 @@
     <string name="editing">Изменение</string>
     <string name="how_to_get_rid_of_preparations_properly">Как правильно утилизировать препараты?</string>
     <string name="preparation_utilization_guide">Просроченный препарат нельзя выбрасывать в мусорку. Его необходимо отнести в любой пункт утилизации (аптеки, больницы поликлиники). Это необходимо для экологичной переработки и предотвращения негативного воздействия химических соединений на окружающую среду.</string>
+    <string name="adding">Добавление</string>
+    <string name="intake_time">Время приема</string>
+    <string name="morning">Утром</string>
+    <string name="day">День</string>
+    <string name="evening">Вечер</string>
+    <string name="preparation_type">Тип препарата</string>
+    <string name="expiration_duration">%1$d год %2$d месяца %3$d дня</string>
 </resources>

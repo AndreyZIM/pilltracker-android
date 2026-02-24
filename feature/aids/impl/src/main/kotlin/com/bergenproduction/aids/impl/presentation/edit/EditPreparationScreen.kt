@@ -182,7 +182,7 @@ internal fun EditPreparationScreen(
                         .fillMaxWidth()
                 )
             }
-            item { Text(text = "Тип препарата") }
+            item { Text(text = stringResource(R.string.preparation_type)) }
             item {
                 FlowRow(
                     horizontalGap = 8.dp

@@ -142,7 +142,7 @@ fun AddPreparationsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Добавление", fontWeight = FontWeight.Medium) },
+                title = { Text(stringResource(R.string.adding), fontWeight = FontWeight.Medium) },
                 navigationIcon = {
                     IconButton(onDismiss) {
                         Icon(Icons.Default.Close, null)
@@ -179,7 +179,7 @@ fun AddPreparationsScreen(
                 OutlinedTextField(
                     value = nameState.value.text,
                     onValueChange = onNameChange,
-                    label = { Text("Название") },
+                    label = { Text(stringResource(R.string.name)) },
                     isError = nameState.value.isError(),
                     supportingText = {
                         if (nameState.value.error.isNotEmpty()) Text(text = nameState.value.error)
@@ -239,13 +239,13 @@ fun AddPreparationsScreen(
                         .fillMaxWidth()
                 )
             }
-            item { Text(text = "Время приема") }
+            item { Text(text = stringResource(R.string.intake_time)) }
             item {
                 Row {
                     Checkbox(
                         checked = haveToBeConsumedAtMorning,
                         onCheckedChange = { haveToBeConsumedAtMorning = it })
-                    Text("Утром", modifier = Modifier.align(Alignment.CenterVertically))
+                    Text(stringResource(R.string.morning), modifier = Modifier.align(Alignment.CenterVertically))
                 }
 
             }
@@ -254,7 +254,7 @@ fun AddPreparationsScreen(
                     Checkbox(
                         checked = haveToBeConsumedAtNoon,
                         onCheckedChange = { haveToBeConsumedAtNoon = it })
-                    Text("День", modifier = Modifier.align(Alignment.CenterVertically))
+                    Text(stringResource(R.string.day), modifier = Modifier.align(Alignment.CenterVertically))
                 }
 
             }
@@ -263,10 +263,10 @@ fun AddPreparationsScreen(
                     Checkbox(
                         checked = haveToBeConsumedAtEvening,
                         onCheckedChange = { haveToBeConsumedAtEvening = it })
-                    Text("Вечер", modifier = Modifier.align(Alignment.CenterVertically))
+                    Text(stringResource(R.string.evening), modifier = Modifier.align(Alignment.CenterVertically))
                 }
             }
-            item { Text(text = "Тип препарата") }
+            item { Text(text = stringResource(R.string.preparation_type)) }
             item {
                 FlowRow(
                     horizontalGap = 8.dp
