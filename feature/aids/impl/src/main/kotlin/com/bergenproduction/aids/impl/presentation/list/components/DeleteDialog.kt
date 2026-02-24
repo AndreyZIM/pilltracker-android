@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.bergenproduction.aids.impl.presentation.list
+package com.bergenproduction.aids.impl.presentation.list.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,8 +17,10 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.bergenproduction.aids.impl.R
 
 @Composable
 fun DeleteDialog(
@@ -33,32 +35,32 @@ fun DeleteDialog(
         modifier = modifier,
     ) {
         ElevatedCard(
-            modifier = Modifier.Companion.wrapContentSize(),
+            modifier = Modifier.wrapContentSize(),
             shape = RoundedCornerShape(28.dp)
         ) {
-            Column(modifier = Modifier.Companion.padding(24.dp)) {
+            Column(modifier = Modifier.padding(24.dp)) {
                 Text(
                     text = title,
-                    modifier = Modifier.Companion,
+                    modifier = Modifier,
                     fontSize = 24.sp,
                     lineHeight = 32.sp,
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Text(
                     text = body,
-                    modifier = Modifier.Companion
+                    modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 16.dp, bottom = 24.dp),
                     fontSize = 14.sp,
                     lineHeight = 20.sp,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
-                Row(modifier = Modifier.align(Alignment.Companion.End)) {
+                Row(modifier = Modifier.align(Alignment.End)) {
                     TextButton(onDismissRequest) {
-                        Text(text = "Нет")
+                        Text(text = stringResource(R.string.no))
                     }
                     TextButton(onConfirmRequest) {
-                        Text(text = "Да")
+                        Text(text = stringResource(R.string.yes))
                     }
                 }
             }

@@ -51,6 +51,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.bergenproduction.aids.impl.R
+import com.bergenproduction.aids.impl.presentation.list.components.AddAidDialog
+import com.bergenproduction.aids.impl.presentation.list.components.DeleteDialog
+import com.bergenproduction.aids.impl.presentation.list.components.EditAidDialog
+import com.bergenproduction.aids.impl.presentation.list.components.PreparationsListTopAppBar
 import com.bergenproduction.aids.impl.presentation.models.PreparationUI
 import com.bergenproduction.pilltracker.core.ui.designsystem.components.LongPressableTab
 import com.bergenproduction.pilltracker.core.ui.designsystem.components.PreparationCard
@@ -59,7 +63,7 @@ import com.bergenproduction.pilltracker.core.ui.designsystem.theme.ThemeIcons
 import kotlin.math.absoluteValue
 
 @Composable
-fun PreparationsListRoute(
+internal fun PreparationsListRoute(
     onAddPrepPress: (Int, String) -> Unit,
     onCardPressed: (PreparationUI) -> Unit,
     onQuestionsPressed: () -> Unit,
@@ -288,8 +292,6 @@ internal fun PreparationsListScreen(
 @Composable
 private fun PreparationsListPreview() {
     PillTrackerTheme {
-//        PreparationsListScreen(PreparationsListViewModel())
-//        DeletePreparationDialog({}, {})
         AddAidDialog({}, {})
     }
 }
@@ -298,13 +300,11 @@ private fun PreparationsListPreview() {
 @Composable
 private fun PreparationsListPreview2() {
     PillTrackerTheme {
-//        PreparationsListScreen(PreparationsListViewModel())
         DeleteDialog(
             {},
             {},
             "Удалить?",
             "Препарат будет удален из списка. Убедитесь, что Вы точно утилизировали препарат."
         )
-//        AddAidDialog({}, {})
     }
 }

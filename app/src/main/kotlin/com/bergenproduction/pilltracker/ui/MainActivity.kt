@@ -1,7 +1,6 @@
 package com.bergenproduction.pilltracker.ui
 
 import android.Manifest
-import android.content.IntentFilter
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -9,15 +8,18 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
-import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.bergenproduction.pilltracker.core.ui.designsystem.theme.PillTrackerTheme
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
@@ -25,7 +27,6 @@ import com.google.accompanist.permissions.isGranted
 import com.google.accompanist.permissions.rememberPermissionState
 import com.google.accompanist.permissions.shouldShowRationale
 import dagger.hilt.android.AndroidEntryPoint
-import kotlin.getValue
 
 @OptIn(ExperimentalPermissionsApi::class)
 @AndroidEntryPoint
@@ -85,5 +86,13 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+}
+
+@Preview
+@Composable
+fun TESTPRE(modifier: Modifier = Modifier) {
+    PillTrackerTheme() {
+        Text("dsafdsfd", Modifier.padding(40.dp))
     }
 }

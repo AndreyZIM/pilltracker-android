@@ -2,7 +2,7 @@ package com.bergenproduction.aids.impl.presentation.models
 
 import java.util.Date
 
-data class PreparationUI(
+internal data class PreparationUI(
     val id: Int,
     val aidId: Int,
     val name: String,
@@ -19,7 +19,7 @@ data class PreparationUI(
     val haveToBeConsumedAtEvening: Boolean,
 )
 
-enum class PreparationType {
+internal enum class PreparationType {
     Antiviral,
     Antibiotic,
     Sedative,

@@ -19,7 +19,10 @@ interface PreparationRepository {
         dosage: Int,
         expiration: Date,
         recommendations: String,
-        type: IntArray
+        type: IntArray,
+        haveToBeConsumedAtMorning: Boolean,
+        haveToBeConsumedAtNoon: Boolean,
+        haveToBeConsumedAtEvening: Boolean,
     ): Int
 
     suspend fun editPreparation(
@@ -29,7 +32,10 @@ interface PreparationRepository {
         dosage: Int,
         expiration: Date,
         recommendations: String,
-        type: IntArray
+        type: IntArray,
+        haveToBeConsumedAtMorning: Boolean,
+        haveToBeConsumedAtNoon: Boolean,
+        haveToBeConsumedAtEvening: Boolean,
     )
 
     suspend fun deletePreparation(id: Int)

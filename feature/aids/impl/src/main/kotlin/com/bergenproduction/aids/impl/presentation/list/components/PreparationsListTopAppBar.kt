@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.bergenproduction.aids.impl.presentation.list
+package com.bergenproduction.aids.impl.presentation.list.components
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -32,6 +32,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.bergenproduction.aids.impl.R
+import com.bergenproduction.aids.impl.presentation.list.SearchState
 import com.bergenproduction.pilltracker.core.ui.designsystem.theme.ThemeIcons
 
 
@@ -87,7 +88,7 @@ internal fun PreparationsListTopAppBar(
             }
         } else {
             TopAppBar(
-                title = { Text(text = "PillTracker", fontWeight = FontWeight.Medium) },
+                title = { Text(text = stringResource(R.string.project_name), fontWeight = FontWeight.Medium) },
                 actions = {
                     IconButton(onClick = { uriHandler.openUri(PreparationsListTopAppBarDefaults.URL) }) {
                         Icon(ThemeIcons.Language, null)
@@ -103,7 +104,7 @@ internal fun PreparationsListTopAppBar(
                         onDismissRequest = { showMoreDropDownMenu = false },
                     ) {
                         DropdownMenuItem(
-                            text = { Text("Q&A") },
+                            text = { Text(stringResource(R.string.QNA)) },
                             onClick = {
                                 showMoreDropDownMenu = false
                                 onQuestionsPressed.invoke()

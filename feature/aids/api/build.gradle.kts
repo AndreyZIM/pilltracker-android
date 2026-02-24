@@ -6,6 +6,9 @@ plugins {
 
 android {
     namespace = "com.bergenproduction.aids.api"
+    compileSdk {
+        version = release(36)
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

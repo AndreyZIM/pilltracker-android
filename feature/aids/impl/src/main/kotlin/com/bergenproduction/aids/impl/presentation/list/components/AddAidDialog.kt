@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.bergenproduction.aids.impl.presentation.list
+package com.bergenproduction.aids.impl.presentation.list.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -25,14 +25,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.bergenproduction.aids.impl.R
 
 @Composable
 fun AddAidDialog(
     onDismissRequest: () -> Unit,
     onAddRequest: (String) -> Unit,
-    modifier: Modifier = Modifier.Companion
+    modifier: Modifier = Modifier,
 ) {
     var name by remember { mutableStateOf("") }
 
@@ -51,7 +53,7 @@ fun AddAidDialog(
                     modifier = Modifier.align(Alignment.CenterHorizontally)
                 )
                 Text(
-                    text = "Добавить аптечку",
+                    text = stringResource(R.string.add_aid),
                     modifier = Modifier
                         .align(Alignment.CenterHorizontally)
                         .padding(top = 16.dp),
@@ -60,7 +62,7 @@ fun AddAidDialog(
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Text(
-                    text = "Укажите название аптечки",
+                    text = stringResource(R.string.set_aid_name),
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 16.dp, bottom = 4.dp),
@@ -71,15 +73,15 @@ fun AddAidDialog(
                 OutlinedTextField(
                     value = name,
                     onValueChange = { name = it },
-                    label = { Text("Название") },
+                    label = { Text(stringResource(R.string.name)) },
                     modifier = Modifier.padding(bottom = 24.dp)
                 )
                 Row(modifier = Modifier.align(Alignment.End)) {
                     TextButton(onDismissRequest) {
-                        Text(text = "Отмена")
+                        Text(text = stringResource(R.string.cancel))
                     }
                     TextButton({ onAddRequest.invoke(name) }) {
-                        Text(text = "Ок")
+                        Text(text = stringResource(R.string.ok))
                     }
                 }
             }

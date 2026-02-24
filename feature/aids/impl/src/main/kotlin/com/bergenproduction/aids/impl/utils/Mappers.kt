@@ -10,7 +10,7 @@ import java.time.ZoneId
 import java.util.Calendar
 import java.util.Date
 
-fun Preparation.toUi(): PreparationUI {
+internal fun Preparation.toUi(): PreparationUI {
     val cal1 = Calendar.getInstance()
     val cal2 = Calendar.getInstance()
     cal1.time = Date(System.currentTimeMillis())
@@ -42,4 +42,4 @@ fun Preparation.toUi(): PreparationUI {
     )
 }
 
-fun Aid.toUi(selected: Boolean = false) = AidUI(id = id, name = name, selected = selected)
+internal fun Aid.toUi(selected: Boolean = false) = AidUI(id = id, name = name, selected = selected)

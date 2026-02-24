@@ -8,8 +8,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.bergenproduction.aids.impl.presentation.navigation.preparationsListGraph
 import com.bergenproduction.common.navigation.NavigationRoute
 import com.bergenproduction.pilltracker.ui.PillTrackerAppState
+import com.bergenprodution.aids.api.navigation.AidsGraphNavRoute
 
 @Composable
 fun PillTrackerNavHost(
@@ -19,7 +21,7 @@ fun PillTrackerNavHost(
 ) {
     NavHost(
         navController = navController,
-        startDestination = NavigationRoute.PreparationsListGraph,
+        startDestination = AidsGraphNavRoute,
         modifier = Modifier.fillMaxSize()
     ) {
         preparationsListGraph(navController, modifier)

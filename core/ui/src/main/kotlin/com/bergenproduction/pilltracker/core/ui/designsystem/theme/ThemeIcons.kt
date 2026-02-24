@@ -18,4 +18,5 @@ object ThemeIcons {
     val Search @Composable get() = painterResource(R.drawable.ic_search)
     val Notes @Composable get() = painterResource(R.drawable.ic_add_notes)
     val Delete @Composable get() = painterResource(R.drawable.ic_delete)
+    val Check @Composable get() = painterResource(R.drawable.baseline_check_24)
 }
